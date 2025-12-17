@@ -1,0 +1,108 @@
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: secondo_test_g.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 1 max VUs, 1m40s max duration (incl. graceful stop):
+              * default: Up to 1 looping VUs for 1m10s over 3 stages (gracefulRampDown: 30s, gracefulStop: 30s)
+
+WARN[0000] Error from API server                         error="listen tcp 127.0.0.1:6565: bind: address already in use"
+
+
+  █ THRESHOLDS 
+
+    http_req_duration
+    ✓ 'p(95)<500' p(95)=91.7ms
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 66      0.931481/s
+    checks_succeeded...: 100.00% 66 out of 66
+    checks_failed......: 0.00%   0 out of 66
+
+    ✓ status is 200
+
+    HTTP
+    http_req_duration..............: avg=67.46ms min=35.63ms med=62.74ms max=239.71ms p(90)=84.93ms p(95)=91.7ms
+      { expected_response:true }...: avg=67.46ms min=35.63ms med=62.74ms max=239.71ms p(90)=84.93ms p(95)=91.7ms
+    http_req_failed................: 0.00%  0 out of 66
+    http_reqs......................: 66     0.931481/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.07s   min=1.03s   med=1.06s   max=1.31s    p(90)=1.08s   p(95)=1.09s 
+    iterations.....................: 66     0.931481/s
+    vus............................: 1      min=1       max=1
+    vus_max........................: 1      min=1       max=1
+
+    NETWORK
+    data_received..................: 22 kB  309 B/s
+    data_sent......................: 8.2 kB 116 B/s
+
+
+
+
+running (1m10.9s), 0/1 VUs, 66 complete and 0 interrupted iterations
+default ✓ [======================================] 0/1 VUs  1m10s
+(base) Luca@MacBook-Air-di-Alessandro project_Cloud % nano secondo_test.js    
+(base) Luca@MacBook-Air-di-Alessandro project_Cloud % k6 run secondo_test.js  
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: secondo_test.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 1 max VUs, 1m40s max duration (incl. graceful stop):
+              * default: Up to 1 looping VUs for 1m10s over 3 stages (gracefulRampDown: 30s, gracefulStop: 30s)
+
+WARN[0000] Error from API server                         error="listen tcp 127.0.0.1:6565: bind: address already in use"
+
+
+  █ THRESHOLDS 
+
+    http_req_duration
+    ✓ 'p(95)<500' p(95)=122.4ms
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 64      0.904755/s
+    checks_succeeded...: 100.00% 64 out of 64
+    checks_failed......: 0.00%   0 out of 64
+
+    ✓ status is 200
+
+    HTTP
+    http_req_duration..............: avg=99.69ms min=51.42ms med=82.15ms max=614.95ms p(90)=107.37ms p(95)=122.4ms
+      { expected_response:true }...: avg=99.69ms min=51.42ms med=82.15ms max=614.95ms p(90)=107.37ms p(95)=122.4ms
+    http_req_failed................: 0.00% 0 out of 64
+    http_reqs......................: 64    0.904755/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.1s    min=1.05s   med=1.08s   max=1.71s    p(90)=1.1s     p(95)=1.12s  
+    iterations.....................: 64    0.904755/s
+    vus............................: 1     min=1       max=1
+    vus_max........................: 1     min=1       max=1
+
+    NETWORK
+    data_received..................: 31 kB 432 B/s
+    data_sent......................: 13 kB 187 B/s
+
+
+
