@@ -6,8 +6,8 @@ This project provides a performance comparison between AWS Lambda and Google Clo
 
 ### 📊 Presentations (`.pptx`)
 The main analysis is contained in the presentation slides, available in two languages. They cover workflows, cold starts, stress tests, and cost analysis.
-* **English Version:** AWS_vs_GCF.pptx
-* **Italian Version:** AWS_vs_GCF_ENG.pptx
+* **English Version:** AWS_vs_GCF_ENG.pptx
+* **Italian Version:** AWS_vs_GCF.pptx
 
 ### 🧪 Test Scripts (`.js`)
 The repository includes the **k6** load testing scripts used to gather performance data:
